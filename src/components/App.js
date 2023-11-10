@@ -13,7 +13,7 @@ function App() {
       })
 
   },[])
-//console.log(transaction)
+console.log(transaction)
   return (
     <div>
       <AllTransactions transact={transaction} />
