@@ -12,14 +12,12 @@ function App() {
   const value = event.target.value;
   addInput(values => ({...values, [name]: value}))
  
- 
-
 }
 
   function handleSubmit(event){
     event. preventDefault() 
     console.log(input)
-    event.target.reset("")
+   
     fetch(`http://localhost:3000/transactions`, {
       method:"POST",
       headers:{
@@ -27,8 +25,9 @@ function App() {
         "Accept" : "application/json"
       },
       body:JSON.stringify(input)
+    
     })
-
+    event.target.reset()
 }
 useEffect(() => {
     fetch("http://localhost:3000/transactions")
@@ -36,7 +35,7 @@ useEffect(() => {
       .then(data => {
         isTransaction(data)
       })
-
+     
   },[])
 //console.log(transaction)
   return (
@@ -77,7 +76,6 @@ useEffect(() => {
           name='date'
           
           value={input.date || ""}
-          placeholder='Enter date'
           required
           onChange={handleChange}
         /> 
