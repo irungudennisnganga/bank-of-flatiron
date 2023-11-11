@@ -18,6 +18,9 @@ function AllTransactions({transact}) {
             <tr>
               <td style={{color: "#cf1b3f"}}>Date : {data.date}</td>
             </tr>
+            <tr>
+              <td style={{color: "#cf1b3f"}}>Amount : {data.amount}</td>
+            </tr>
         </tbody>   
     </table>
     )

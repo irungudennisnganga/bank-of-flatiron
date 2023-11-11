@@ -1,7 +1,5 @@
 {
-
-    
-"transactions": [
+  "transactions": [
     {
       "id": 1,
       "date": "2019-12-01",
@@ -99,8 +97,13 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "category": "payment",
+      "description": "pay for my services",
+      "amount": "-500",
+      "date": "2023-11-11",
+      "id": 15
     }
   ]
- }
- 
- 
+}
