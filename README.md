@@ -1,10 +1,34 @@
-# Getting Started with Create React App
+# bank-of-flatiron
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Run locally
+first start by making a copy of the project on your GitHub account by forking and clone it to the local computer to be able to access the project.
+After making a fork to your Github account click on the 'CODE' button and copy the SSH key then
 
-## Available Scripts
 
-In the project directory, you can run:
+Go to the terminal and to the directory where the copy exist on the local machine.
+
+
+```bash
+  git clone git@github.com:examplename/bank-of-flatiron.git
+```
+
+
+
+```bash
+  cd bank-of-flatiron
+```
+
+open folder in text editor 
+
+```bash
+  code .
+```
+
+
+### `npm install`
+
+    Run npm install to install the expected packages.
+    After that run the following comands on the terminal to keep the react app running
 
 ### `npm start`
 
@@ -39,33 +63,45 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Author 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ * [irungudennis](https://github.com/irungudenningang
 
-### Analyzing the Bundle Size
+ ## How the project works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    This project is based on react :
+    * As a user i can see a list of alll my transaction.
+    * As a user i can add a transaction.
+    * As a user i can filter the list of transaction using a search input.
 
-### Making a Progressive Web App
+      ## 🚀 About Me
+ * I'm a full stack developer
+ * find me [here](https://github.com/irungudenninganga)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## License 
+MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Copyright (c) 2023 irungudennisnganga
 
-### Deployment
+>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### `npm run build` fails to minify
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# bank-of-flatiron
