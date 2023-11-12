@@ -33,7 +33,7 @@ open folder in text editor
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:8001](http://localhost:8001) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -68,7 +68,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### Author 
 
- * [irungudennis](https://github.com/irungudenningang
+ * [irungudennis](https://github.com/irungudenningang)
 
  ## How the project works
 
@@ -76,8 +76,8 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
     * As a user i can see a list of alll my transaction.
     * As a user i can add a transaction.
     * As a user i can filter the list of transaction using a search input.
-
     ![bank of flatiron](./images/bank.png)
+   
 
 ## 🚀 About Me
  * I'm a full stack developer
