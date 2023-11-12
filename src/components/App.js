@@ -1,24 +1,36 @@
-import {useState , useEffect} from 'react'
+import {useState , useEffect } from 'react'
 import AllTransactions from './AllTransactions'
 import "./App.css"
+import Search from './Search'
+
+//import { handleSearch } from './Search'
 
 function App() {
   const [transaction,isTransaction] = useState([])
   const [input, addInput] = useState({})
-
-
- function handleChange(event){
-  const name = event.target.name;
-  const value = event.target.value;
+  const [searchdata, setSearch] = useState("")
+  
+  useEffect(() => {
+    fetch("http://localhost:8001/transactions")
+      .then(res => res.json())
+      .then(data => {
+        isTransaction(data)
+      })
+     
+  },[])
+ function handleChange(e){
+  const name = e.target.name;
+  const value = e.target.value;
   addInput(values => ({...values, [name]: value}))
  
 }
 
-  function handleSubmit(event){
-    event. preventDefault() 
-    console.log(input)
+  function handleSubmit(e){
+    e.preventDefault() 
+   // console.log(input)
+   e.target.reset()
    
-    fetch(`http://localhost:3000/transactions`, {
+    fetch(`http://localhost:8001/transactions`, {
       method:"POST",
       headers:{
         "content-Type" : "application/json",
@@ -27,19 +39,17 @@ function App() {
       body:JSON.stringify(input)
     
     })
-    event.target.reset()
+  
 }
-useEffect(() => {
-    fetch("http://localhost:3000/transactions")
-      .then(res => res.json())
-      .then(data => {
-        isTransaction(data)
-      })
-     
-  },[])
+
+ 
+
+  // 
 //console.log(transaction)
   return (
     <div>
+    <Search searchdata={searchdata} transaction={transaction} setSearches={setSearch}/>
+
       <form onSubmit={handleSubmit}> 
         <input
           
@@ -74,7 +84,7 @@ useEffect(() => {
         <input
           type='date'
           name='date'
-          
+  
           value={input.date || ""}
           required
           onChange={handleChange}
@@ -82,8 +92,10 @@ useEffect(() => {
        <button  type="submit">Submit</button>
       </form><br /> <br />
       <AllTransactions transact={transaction} />
+     
     </div>
   )
 }
 
 export default App
+ 

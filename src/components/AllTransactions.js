@@ -5,7 +5,7 @@ function AllTransactions({transact}) {
  let list=  transact.map( data => {
  //console.log(data)
     return (
-    <table key={data.id}>
+    <React.Fragment key={data.id}>
         <thead>
             <tr>
                <th style={{color:"green"}}>Category : {data.category}</th>
@@ -22,15 +22,15 @@ function AllTransactions({transact}) {
               <td style={{color: "#cf1b3f"}}>Amount : {data.amount}</td>
             </tr>
         </tbody>   
-    </table>
+    </React.Fragment>
     )
        
    }) 
 
   return (
-    <div >
+    <table >
        {list}
-    </div>
+    </table>
   )
 }
 
