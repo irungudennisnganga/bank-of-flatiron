@@ -4,7 +4,7 @@ function Search( {transaction  ,searchdata,setSearches }) {
     //console.log(searchdata)
     function handleSearch(e){
         e.preventDefault()
-        if (!true) return (setSearches(transaction)) 
+     
 
         const results = transaction.filter( transact => {
             transact.description.includes(e.target.value)
@@ -23,7 +23,7 @@ function Search( {transaction  ,searchdata,setSearches }) {
           type="text" 
           value={searchdata}
           onChange={(e) => setSearches(e.target.value)}
-         
+          required
         />
       </label>
       <button type='search'>Search</button>
