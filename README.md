@@ -77,7 +77,9 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
     * As a user i can add a transaction.
     * As a user i can filter the list of transaction using a search input.
 
-      ## 🚀 About Me
+    ![bank of flatiron](./images/bank.png)
+
+## 🚀 About Me
  * I'm a full stack developer
  * find me [here](https://github.com/irungudenninganga)
 
