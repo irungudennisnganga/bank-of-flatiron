@@ -1,28 +1,27 @@
-import React from 'react'
+import { useState ,useEffect } from "react";
 
-function Search( {transaction  ,searchdata,setSearches }) {
-    //console.log(searchdata)
-    function handleSearch(e){
-        e.preventDefault()
-     
+function Search( {transaction }) {
+    const [searchdata, setSearch] = useState("")
+ 
+    const handleSearch = (event) => {
+        event.preventDefault()
 
-        const results = transaction.filter( transact => {
-            transact.description.includes(e.target.value)
-        })
-
-      setSearches(results)
-       e.target.reset()
-      //console.log(results)
-      }
-   
-  return (
+        const filtered = transaction.filter(transact=>
+          transact.description.includes(searchdata)
+        );
+        setSearch(filtered);
+       // console.log(filtered) 
+       
+      };
+    //  
+   return (
     <>
        <form onSubmit={handleSearch}>
       <label>Search by description 
         <input
           type="text" 
           value={searchdata}
-          onChange={(e) => setSearches(e.target.value)}
+          onChange={(e) => setSearch(e.target.value)}
           required
         />
       </label>

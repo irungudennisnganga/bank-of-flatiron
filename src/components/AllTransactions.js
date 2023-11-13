@@ -1,36 +1,34 @@
 import React from 'react'
 
 function AllTransactions({transact}) {
-   // console.log(transact)
- let list=  transact.map( data => {
- //console.log(data)
-    return (
-    <React.Fragment key={data.id}>
-        <thead>
-            <tr>
-               <th style={{color:"green"}}>Category : {data.category}</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-               <td style={{color:"blue"}}>Description : {data.description}</td> 
-            </tr>
-            <tr>
-              <td style={{color: "#cf1b3f"}}>Date : {data.date}</td>
-            </tr>
-            <tr>
-              <td style={{color: "#cf1b3f"}}>Amount : {data.amount}</td>
-            </tr>
-        </tbody>   
-    </React.Fragment>
-    )
-       
-   }) 
 
   return (
     <table >
-       {list}
+       <thead>
+            <tr>
+               <th style={{color:"green"}}>Date</th>
+               <th style={{color:"green"}}>Description </th>
+               <th style={{color:"green"}}>category </th>
+               <th style={{color:"green"}}>Amount </th>
+               
+            </tr>
+        </thead>
+        <tbody>
+          {
+             transact.map( (data) => {
+              //  //console.log(data)
+                  return (
+            <tr key={data.id} >
+              <td style={{color: "#cf1b3f" }}> {data.date}</td> 
+              <td style={{color:"blue"}}>{data.description}</td> 
+              <td style={{color:"blue"}}> {data.category}</td> 
+              <td style={{color: "#cf1b3f"}}> {data.amount}</td>
+            </tr>
+            )}
+            )} 
+       </tbody>   
     </table>
+
   )
 }
 

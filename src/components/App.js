@@ -10,7 +10,9 @@ function App() {
   // useState is important since it helps us keep truck and add new elements dainamicaly
   const [transaction,isTransaction] = useState([])
   const [input, addInput] = useState({})
-  const [searchdata, setSearch] = useState("")
+  //const [searchdata, setSearch] = useState("")
+
+    
 
   //useEffect is used to make the request once when the Dom loads 
   useEffect(() => {
@@ -23,18 +25,13 @@ function App() {
      
   },[])
 
-  
-
- 
-
-  // 
 //console.log(transaction)
   return (
     <div>
-    <Search searchdata={searchdata} transaction={transaction} setSearches={setSearch}/>
-    <FormInput input={input} addInput={addInput} />
-     
-      <AllTransactions transact={transaction} />
+    <Search  transaction={transaction} />
+    <FormInput  input={input} addInput={addInput} />
+    
+      <AllTransactions transact={transaction}  />
      
     </div>
   )

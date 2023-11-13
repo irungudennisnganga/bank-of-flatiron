@@ -13,22 +13,23 @@ function handleChange(e){
   }
   
   // this function is used to hundle submition of the form
-    function handleSubmit(e){
-      e.preventDefault() 
-     // console.log(input)
-     e.target.reset()
-     // making a post request to the server to add the input to the db.json
-      fetch(`http://localhost:8001/transactions`, {
-        method:"POST",
-        headers:{
-          "content-Type" : "application/json",
-          "Accept" : "application/json"
-        },
-        body:JSON.stringify(input)
+  function handleSubmit(e){
+    e.preventDefault() 
+   // console.log(input)
+   
+   // making a post request to the server to add the input to the db.json
+    fetch(`http://localhost:8001/transactions`, {
+      method:"POST",
+      headers:{
+        "content-Type" : "application/json",
+        "Accept" : "application/json"
+      },
+      body:JSON.stringify(input)
       
-      })
-    
+    })
   }
+
+  
   return (
     <div>
        <form onSubmit={handleSubmit}> 
