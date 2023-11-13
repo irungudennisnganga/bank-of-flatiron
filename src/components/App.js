@@ -25,6 +25,23 @@ function App() {
      
   },[])
 
+  function handleSubmit(e){
+    e.preventDefault() 
+   // console.log(input)
+   
+   // making a post request to the server to add the input to the db.json
+    fetch(`http://localhost:8001/transactions`, {
+      method:"POST",
+      headers:{
+        "content-Type" : "application/json",
+        "Accept" : "application/json"
+      },
+      body:JSON.stringify(input)
+      
+    })
+  }
+
+
 //console.log(transaction)
   return (
     <div>
