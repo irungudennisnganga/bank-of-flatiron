@@ -27,7 +27,7 @@ function App() {
 
    //useEffect is used to make the request once when the Dom loads 
    useEffect(() => {
-    fetch("https://my-json-server.typicode.com/irungudennisnganga/bank-of-flatiron/transactions")
+    fetch("https://my-json-server.typicode.com/irungudennisnganga/json-server/transactions")
       .then(res => res.json())
       .then(data => {
         // the new data is stored on the firs state

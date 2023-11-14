@@ -18,7 +18,7 @@ function handleChange(e){
    // console.log(input)
    
    // making a post request to the server to add the input to the db.json
-    fetch(`https://my-json-server.typicode.com/irungudennisnganga/bank-of-flatiron/transactions`, {
+    fetch(`https://my-json-server.typicode.com/irungudennisnganga/json-server/transactions`, {
       method:"POST",
       headers:{
         "content-Type" : "application/json",
