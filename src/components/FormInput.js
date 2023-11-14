@@ -18,7 +18,7 @@ function handleChange(e){
    // console.log(input)
    
    // making a post request to the server to add the input to the db.json
-    fetch(`http://localhost:8001/transactions`, {
+    fetch(`https://my-json-server.typicode.com/irungudennisnganga/bank-of-flatiron/transactions`, {
       method:"POST",
       headers:{
         "content-Type" : "application/json",
@@ -28,10 +28,15 @@ function handleChange(e){
       
     })
   
+    .then (res => res.json())
+    .then(data => {
+      // the new data is stored on the firs state
+      addInput(data)
+    })
   }
 
   
-  return (
+  return (// import Search from './Search'
     <div>
        <form onSubmit={handleSubmit}> 
         <input
